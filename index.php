@@ -21,24 +21,18 @@ include ('include/header.php');
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" src="media/lapin1.jpg" alt="premier lapin">
+      <img class="d-block w-100" src="media/CI_1.jpg" alt="premier cochin d'inde">
       <div class="carousel-caption d-md-block">
-    <h1 class="display-2">Adopter un lapin</h1>
-    <h2 class="">Notre adorable lapin adulte recherche un foyer</h2>
   </div>
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="media/lapin2.jpg" alt="Second lapin" >
+      <img class="d-block w-100" src="media/CI_2.jpg" alt="Second cochon d'inde" >
       <div class="carousel-caption d-none d-md-block mask flex-center rgba-green-strong">
-    <h1 class=" display-2">Tic & Tac</h1>
-    <h2 class="">Deux lapraux en recherche d'une famille d'accueil</h2>
   </div>
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="media/lapin3.jpg" alt="Troisième lapin">
+      <img class="d-block w-100" src="media/CI_3.jpg" alt="Troisième cochon d'inde">
       <div class="carousel-caption d-none d-md-block mask flex-center rgba-green-strong">
-    <h1 class="display-2">La famille</h1>
-    <h2 class="">Ces lapins sont inséparables et cherchent une ferme pour vivre ensemble</h2>
   </div>
     </div>
   </div>

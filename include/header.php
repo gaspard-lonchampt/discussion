@@ -14,13 +14,13 @@ session_start();
                 ">
     <img src="<?php 
                 if (!isset($repere)) {
-                    echo '../media/lapin_logo.png';
+                    echo '../media/CI_logo.png';
                 }
                 else {
-                    echo 'media/lapin_logo.png';
+                    echo 'media/CI_logo.png';
                 }?>
                 " width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
-    Save a Little Bunny
+    Forum officiel de Neurchi de Pouik Pouik
   </a>
   <button class="navbar-toggler navbar-toggler-dark" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>

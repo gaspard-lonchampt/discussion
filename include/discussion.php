@@ -5,7 +5,7 @@ try {
 
 $connexion = new PDO("mysql:host=localhost;dbname=discussion", 'root', 'root');
 $connexion -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-$requete_admin = $connexion->prepare("SELECT login, date, message FROM messages INNER JOIN utilisateurs ON messages.id_utilisateur = utilisateurs.id ORDER BY messages.id ASC");
+$requete_admin = $connexion->prepare("SELECT utilisateurs.id, login, date, message FROM messages INNER JOIN utilisateurs ON messages.id_utilisateur = utilisateurs.id ORDER BY messages.id ASC");
 $requete_admin->execute();
 $result = $requete_admin->fetchall(PDO::FETCH_ASSOC);
 setlocale(LC_TIME, ['fr', 'fra', 'fr_FR']);
@@ -72,16 +72,19 @@ if (isset($_POST['comment'])) {
 
 ?>
 
-<div class="container p-3">
+
 <div class="agileits-top">
 
-            <?php 
-            foreach ($result as $key => $value) { ?>
-                <table class="table table-striped table-hover table-dark">
+            <?php
+            foreach ($result as $key => $value) { 
+                if ($_SESSION['id'] == $value['id']) {
+                ?>
+                  <div class="container mr-5 rounded">
+                <table class="table table-striped table-hover table-primary rounded">
                 <tbody>
                 <tr>
                     <td scope="col" class="text-left">
-                    <?php echo $value['login'] ?> </td>
+                    <?php echo "Par " . $value['login'] ?> </td>
                     <td class="text-right"> 
                     <?php echo utf8_encode(strftime('Le %A %d %B %Y',strtotime($value['date']))) ?> </td>
                 </tr>
@@ -89,12 +92,35 @@ if (isset($_POST['comment'])) {
                     <td scope="col" colspan="2">
                     <?php echo $value['message'] ?> </td>
                 </tr>
-               
+                </tbody>
+                </table>
+                </div>
+                <?php
+                }
+
+                else {
+                ?>
+                <div class="container ml-5 rounded">
+                <table class="table table-striped table-hover rounded table-dark">
+                <tbody>
+                <tr>
+                    <td scope="col" class="text-left">
+                    <?php echo "Par ". $value['login'] ?> </td>
+                    <td class="text-right"> 
+                    <?php echo utf8_encode(strftime('Le %A %d %B %Y',strtotime($value['date']))) ?> </td>
+                </tr>
+                <tr>
+                    <td scope="col" colspan="2">
+                    <?php echo $value['message'] ?> </td>
+                </tr>
+                </tbody>
+                </table>
+                </div>
             <?php
-             }   
+                }
+            }   
              ?>
-        </tbody>
-    </table>
+ 
 </div>
 </div>
 

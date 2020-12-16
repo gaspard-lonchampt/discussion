@@ -19,8 +19,8 @@
                         </ul>
                     </div>
                     <div class="col-md-6 item text">
-                        <h5>Save a Little Bunny</h3>
-                        <p>Associations à but non lucratif pour recueillir et faire adopter les lapins abandonnés.</p>
+                        <h5>Forum officiel de Neurchi de Pouik Pouik</h3>
+                        <p>Afficionados de cochon d'Inde</p>
                     </div>
                     <div class="col item social">
                         <a href="https://fr-fr.facebook.com/"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
@@ -29,7 +29,7 @@
                         <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
-                <p class="copyright">Save a Little Bunny © 2020</p>
+                <p class="copyright">Forum officiel de Neurchi de Pouik Pouik © 2020</p>
             </div>
         </footer>
     </div>
