@@ -41,7 +41,6 @@ try {
 			$requete_connexion->execute([$_POST['username']]);
 			$user = $requete_connexion->fetchall(); 
 
-			var_dump($user);
 
 			if($user AND password_verify($password, $user[0]['password'])) {
 

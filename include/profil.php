@@ -41,27 +41,23 @@ if (isset($_POST["register"])) {
       $count= $requete_same_login->rowCount();
       $user = $requete_same_login->fetchall(); 
 
-      echo "Première condition check";
 
       if ($count>0 AND $user[0]['id'] == $_SESSION['id']) {
          $error = TRUE;
          $errorMsg = "Ceci est déjà votre identifiant";
 
-         echo "1 condition dans 1ère";
       }
       elseif ($count>0 AND $user[0]['id'] !== $_SESSION['id']) {   
 
          $error = TRUE;
          $errorMsg = "Identifiant déjà prit";
 
-         echo "2 condition dans 1ère";
       }
       else {
          if (strlen($login) > 60) {
             $error = TRUE;
             $errorMsg = "L'identifiant doit faire moins de 60 caractères"; 
 
-            echo "3 condition dans 1ère";
          }
          else {
          $requete_update->execute([$login, $_SESSION['password'], $_SESSION['id']]);
@@ -69,7 +65,6 @@ if (isset($_POST["register"])) {
          $sucessMsg = "Identifiant mis à jour";
          $_SESSION['login'] = $login;
 
-         echo "4 condition dans 1ère";
          }
       }
    }
